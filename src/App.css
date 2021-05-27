@@ -1,0 +1,141 @@
+.App {
+  font-family: 'Source Sans Pro', sans-serif;
+  background-color: #002e35;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(30px + 2vmin);
+  color: white;
+}
+
+.buttons {
+  padding: 10px;
+}
+
+#desc {
+  font-size: calc(12px + 1vmin);
+  text-align: center;
+}
+
+#footer {
+  margin-bottom: 10px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+  font-size: calc(6px + 1vmin);
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+/* from https://speckyboy.com/flame-effects-code-snippets/ because I'm bad at CSS */
+
+@keyframes particleUp {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    top: -2%;
+    transform: scale(0.2);
+  }
+}
+
+@keyframes particleUpMore {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    top: -10%;
+    transform: scale(0.2);
+  }
+}
+
+.fire {
+  position: absolute;
+  top: calc(50% - 150px);
+  left: calc(50% - 44px);
+  width: 100px;
+  height: 100px;
+  background-color: transparent;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.fire2 {
+  position: absolute;
+  top: calc(50% - 150px);
+  left: calc(50% - 56px);
+  width: 100px;
+  height: 100px;
+  background-color: transparent;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.fire-main {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  animation: scaleUpDown 3s ease-out;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+
+.fire-main .particle-fire {
+  position: absolute;
+  top: 60%;
+  left: 45%;
+  width: 8px;
+  height: 8px;
+  background-color: #f7b858;
+  border-radius: 50%;
+  filter: drop-shadow(0 0 5px #e63b4e);
+  animation: particleUp 4s ease-out;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+.fire2-main {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  animation: scaleUpDown 3s ease-out;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+
+.fire2-main .particle-fire-2 {
+  position: absolute;
+  top: 60%;
+  left: 45%;
+  width: 6px;
+  height: 6px;
+  background-color: #f7b858;
+  border-radius: 50%;
+  filter: drop-shadow(0 0 5px #e63b4e);
+  animation: particleUpMore 3s ease-out;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+
+/* code from link ends */
